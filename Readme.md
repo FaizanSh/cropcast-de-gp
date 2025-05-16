@@ -3,7 +3,7 @@
 ### Place it in scripts folder for your scirpts to work, where you have to paste in your credentials. In case if you have any difficulty, do reach out to us
 
 # Step 2
-# Run DLL file in your DB
+# Run DLL file dll.sql in your DB
 
 # Step 3
 ## Kafka Installation Guide [Docker Required]
