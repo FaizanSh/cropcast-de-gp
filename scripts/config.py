@@ -3,6 +3,7 @@ from datetime import datetime
 import pandas as pd
 from config_loader import get_aws_credentials, get_postgres_uri
 
+credentials = get_aws_credentials()
 DB_CONFIG = {
     "user": os.getenv("POSTGRES_USER", "postgres"),
     "password": os.getenv("POSTGRES_PASSWORD"),
@@ -34,7 +35,7 @@ DB_PORT = os.getenv("POSTGRES_PORT", "5432")
 DB_NAME = os.getenv("POSTGRES_DBNAME", "postgres")
 
 # S3 configuration
-AWS_ACCESS_KEY = os.getenv("AWS_ACCESS_KEY")
-AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
-BUCKET_NAME = os.getenv("BUCKET_NAME")
-REGION_NAME = os.getenv("REGION_NAME")
+AWS_ACCESS_KEY = credentials['aws_access_key_id']
+AWS_SECRET_KEY = credentials['aws_secret_access_key']
+BUCKET_NAME = 'cropcast'
+REGION_NAME = credentials['region_name']

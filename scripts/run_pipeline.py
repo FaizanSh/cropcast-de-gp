@@ -40,6 +40,7 @@ def run_weather_forecast_pipeline(forecast_days=7, save_csv=True, plot_results=T
             'rain_model_weather_api.pkl': 'models/rain_model_weather_api.pkl',
             'wind_model_weather_api.pkl': 'models/wind_model_weather_api.pkl'
         }
+
         upload_to_s3(model_files, BUCKET_NAME, AWS_ACCESS_KEY,
                      AWS_SECRET_KEY, REGION_NAME)
 

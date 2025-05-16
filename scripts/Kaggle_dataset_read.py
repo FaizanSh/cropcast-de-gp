@@ -21,6 +21,12 @@ def get_data_from_kaggle_file():
     '''
     Loads the file of the kaggle saved file and transforms the data into scaled splits for ML
     '''
+    aws_credentials = get_aws_credentials()
+    aws_access_key = aws_credentials['aws_access_key_id']
+    aws_secret_key = aws_credentials['aws_secret_access_key']
+    bucket_name = 'cropcast'
+    region_name = aws_credentials['region_name']
+    
     s3 = boto3.client('s3',
                       aws_access_key_id=aws_access_key,
                       aws_secret_access_key=aws_secret_key,
