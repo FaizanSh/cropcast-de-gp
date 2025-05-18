@@ -42,6 +42,10 @@ Command: `python iot_crop_producer.py`
 Dag: `DE_IoT_Crop_Consumer_Kafka_Spark_with_Prediction.py`
 Command: `spark-submit --packages org.postgresql:postgresql:42.7.3,org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.5 farm_predictions.py`
 
+# for local visualizations you can run the below code
+python main_file_streamlit.py
+# for huggingface space visualization you can accesss it on 'https://huggingface.co/spaces/AI71/DE2'
+
 # Extra Guide Step for Airflow in Ubuntu Environment
 
 ## Airflow installation guide
